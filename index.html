@@ -10,20 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --forest-950: #16302a;
-    --forest-800: #1e4a3e;
-    --forest-600: #2c6a55;
-    --forest-500: #3d8a6e;
-    --clay-600: #a4502f;
-    --clay-500: #c2673f;
+    --forest-950: #3a1f22;
+    --forest-800: #5c2f30;
+    --forest-600: #7c4443;
+    --forest-500: #9c5a52;
+    --clay-600: #c1573c;
+    --clay-500: #d97a54;
     --gold-500: #d3a13c;
     --gold-300: #e8c471;
-    --ground: #f4efe0;
-    --paper: #fffcf5;
-    --ink: #212820;
-    --ink-soft: #566056;
-    --border: #e2d8bf;
-    --shadow: 0 14px 34px rgba(22, 48, 42, 0.09);
+    --ground: #f5efe2;
+    --paper: #fffbf6;
+    --ink: #291d1a;
+    --ink-soft: #6b5850;
+    --border: #e8d9c8;
+    --shadow: 0 14px 34px rgba(58, 31, 34, 0.1);
   }
 
   * { box-sizing: border-box; }
@@ -277,6 +277,24 @@
     border-top: 1px dashed var(--border);
     font-weight: 600;
     color: var(--forest-800);
+  }
+  .family-photo {
+    margin: 8px 0 26px;
+    padding: 0;
+  }
+  .family-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  .family-photo figcaption {
+    margin-top: 10px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
   }
 
   .hero-stat {
@@ -636,6 +654,11 @@
       familia y un ejemplo constante de cómo vivir con humor, positivismo y amor por los
       demás. Amante de la vida y de las conversaciones en un asado, es esa persona con la
       que todos siempre quieren estar.</p>
+
+      <figure class="family-photo">
+        <img src="assets/familia.png" alt="Esteban junto a Jimena y sus tres hijos">
+        <figcaption>Cuilo junto a Jimena y sus tres hijos.</figcaption>
+      </figure>
 
       <p>Hoy, Cuilo y su familia están atravesando el reto más difícil de sus vidas tras
       su diagnóstico de cáncer.</p>
