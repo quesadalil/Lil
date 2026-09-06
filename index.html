@@ -634,7 +634,7 @@
       </div>
       <div class="hero-stat">
         <span class="hero-stat-label">Meta de la campaña</span>
-        <span class="hero-stat-value">$150,000 USD</span>
+        <span class="hero-stat-value">$180,000 USD</span>
       </div>
     </div>
   </div>
@@ -690,7 +690,7 @@
     <div class="section-head">
       <div>
         <div class="kicker-word">La meta</div>
-        <h2 class="section-title">Necesitamos reunir $150,000 USD</h2>
+        <h2 class="section-title">Necesitamos reunir $180,000 USD</h2>
       </div>
     </div>
 
@@ -707,7 +707,7 @@
         </div>
         <div class="goal-stat is-goal">
           <span class="goal-label">Meta</span>
-          <span class="goal-value is-accent" id="goalValue">$150,000</span>
+          <span class="goal-value is-accent" id="goalValue">$180,000</span>
         </div>
       </div>
       <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
@@ -858,7 +858,7 @@
   // META DE RECAUDACIÓN: actualiza CAMPAIGN_RAISED (en USD) a medida que se
   // reciban donaciones. La barra de progreso y el porcentaje se recalculan
   // automáticamente — no hay que tocar nada más.
-  const CAMPAIGN_GOAL = 150000;
+  const CAMPAIGN_GOAL = 180000;
   const CAMPAIGN_RAISED = 0;
 
   function formatUSD(amount) {
@@ -918,7 +918,7 @@
     });
   });
 
-  const shareText = 'Ayudemos a Esteban "Cuilo" Ruiz a reunir $150,000 USD para su tratamiento contra el cáncer. Cada aporte cuenta.';
+  const shareText = 'Ayudemos a Esteban "Cuilo" Ruiz a reunir $180,000 USD para su tratamiento contra el cáncer. Cada aporte cuenta.';
 
   document.getElementById('shareWhatsapp').addEventListener('click', () => {
     const url = 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + window.location.href);
