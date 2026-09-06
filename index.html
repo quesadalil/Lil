@@ -180,40 +180,24 @@
     margin: 0 0 26px;
   }
 
-  .hero-facts {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 20px;
-    margin: 0 0 26px;
-    padding: 0;
-    font-family: 'Karla', sans-serif;
-    font-size: 0.92rem;
-    color: rgba(244,239,224,0.82);
-  }
-  .hero-facts li {
-    position: relative;
-    padding-left: 16px;
-  }
-  .hero-facts li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.5em;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold-500);
-  }
-  .hero-facts strong { color: var(--ground); font-weight: 700; }
-
   .hero-why {
     font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 1.02rem;
-    color: var(--gold-300);
-    max-width: 46ch;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--ground);
+    max-width: 48ch;
+    margin: 0 0 10px;
+    padding-left: 16px;
+    border-left: 2px solid var(--gold-500);
+  }
+  .hero-why strong { color: var(--gold-300); font-weight: 600; }
+  .hero-fact-line {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(244,239,224,0.7);
     margin: 0 0 26px;
+    padding-left: 18px;
   }
 
   .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -621,13 +605,10 @@
         difícil de su vida. Su familia y amigos nos unimos para ayudarlo a cubrir los
         costos de tratamiento. Cualquier aporte suma.
       </p>
-      <ul class="hero-facts">
-        <li><strong>44 años</strong> de edad</li>
-        <li><strong>Papá de 3</strong> hijos (14, 11 y 10 años)</li>
-        <li>Diagnosticado a <strong>inicios de 2025</strong></li>
-      </ul>
-      <p class="hero-why">Está dando esta batalla, sobre todo, por el tiempo que
-      quiere seguir compartiendo con ellos.</p>
+      <p class="hero-why">A sus <strong>44 años</strong>, y con <strong>tres hijos de
+      14, 11 y 10 años</strong>, Cuilo está dando esta batalla, sobre todo, por el
+      tiempo que quiere seguir compartiendo con ellos.</p>
+      <p class="hero-fact-line">Diagnosticado a inicios de 2025</p>
       <div class="hero-actions">
         <a href="#donar" class="btn btn-primary"><svg class="icon"><use href="#i-heart"/></svg> Quiero donar</a>
         <a href="#compartir" class="btn btn-outline"><svg class="icon"><use href="#i-megaphone"/></svg> Compartir campaña</a>
