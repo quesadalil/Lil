@@ -259,6 +259,107 @@
     color: var(--forest-800);
   }
 
+  .hero-stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(244,239,224,0.18);
+  }
+  .hero-stat-label {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    opacity: 0.75;
+  }
+  .hero-stat-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gold-300);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* GOAL */
+  .goal-intro { max-width: 66ch; color: var(--ink); margin: 0 0 32px; }
+  .cost-breakdown { max-width: 66ch; margin: 0 0 28px; }
+  .cost-list { list-style: none; margin: 0 0 18px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .cost-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--forest-950);
+  }
+  .cost-list li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold-500);
+    flex-shrink: 0;
+  }
+  .cost-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 2px solid var(--forest-950);
+  }
+  .cost-total span { font-size: 0.9rem; color: var(--ink-soft); font-weight: 600; }
+  .cost-total strong {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--forest-950);
+    font-variant-numeric: tabular-nums;
+  }
+  .insurance-note { max-width: 66ch; color: var(--ink-soft); font-size: 0.98rem; margin: 0 0 32px; }
+  .insurance-note strong { color: var(--forest-950); }
+
+  .goal-card {
+    max-width: 66ch;
+    background: var(--forest-950);
+    color: var(--ground);
+    border-radius: 12px;
+    padding: 28px 30px;
+  }
+  .goal-numbers { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 18px; flex-wrap: wrap; }
+  .goal-stat { display: flex; flex-direction: column; gap: 4px; }
+  .goal-stat.is-goal { text-align: right; }
+  .goal-label {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    opacity: 0.7;
+    font-weight: 700;
+  }
+  .goal-value {
+    font-family: 'Fraunces', serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .goal-value.is-accent { color: var(--gold-300); }
+  .progress-track {
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(244,239,224,0.16);
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold-500), var(--gold-300));
+    border-radius: 999px;
+    transition: width 0.6s ease;
+  }
+  .progress-caption { margin: 0; font-size: 0.85rem; opacity: 0.75; }
+
   /* HOW TO HELP */
   .help-grid {
     display: grid;
@@ -452,6 +553,7 @@
     .section-head { flex-direction: column; align-items: flex-start; }
     .section-note { text-align: left; }
     .sinpe-card { flex-direction: column; align-items: flex-start; }
+    .goal-stat.is-goal { text-align: left; }
     footer .container { flex-direction: column; align-items: flex-start; }
   }
 </style>
@@ -502,6 +604,10 @@
         <a href="#donar" class="btn btn-primary"><svg class="icon"><use href="#i-heart"/></svg> Quiero donar</a>
         <a href="#compartir" class="btn btn-outline"><svg class="icon"><use href="#i-megaphone"/></svg> Compartir campaña</a>
       </div>
+      <div class="hero-stat">
+        <span class="hero-stat-label">Meta de la campaña</span>
+        <span class="hero-stat-value">$150,000 USD</span>
+      </div>
     </div>
   </div>
 </header>
@@ -542,6 +648,54 @@
 
       <p class="signoff">De corazón, gracias por tus oraciones, tus mensajes de apoyo y
       tu generosidad en este momento. Vamos a acompañar a Cuilo a ganar esta pelea.</p>
+    </div>
+  </div>
+</section>
+
+<section id="meta" style="background:var(--paper); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="container container--narrow">
+    <div class="section-head">
+      <div>
+        <div class="kicker-word">La meta</div>
+        <h2 class="section-title">Por qué necesitamos $150,000 USD</h2>
+      </div>
+    </div>
+
+    <p class="goal-intro">El tratamiento de Cuilo incluye cuidados paliativos,
+    radioterapia y un tratamiento oral especializado. Queremos ser transparentes sobre
+    lo que representa su atención médica y la meta que buscamos alcanzar con esta
+    campaña.</p>
+
+    <div class="cost-breakdown">
+      <ul class="cost-list">
+        <li>Cuidados paliativos</li>
+        <li>Radioterapia</li>
+        <li>Tratamiento oral especializado</li>
+      </ul>
+      <div class="cost-total">
+        <span>Costo anual total estimado</span>
+        <strong>$1,260,000 USD</strong>
+      </div>
+    </div>
+
+    <p class="insurance-note">Parte de este costo puede cubrirse con su seguro médico.
+    Aun así, para garantizar el <strong>tratamiento mínimo</strong> que Cuilo necesita,
+    todavía falta reunir <strong>$150,000 USD</strong> — esa es la meta de esta
+    campaña.</p>
+
+    <div class="goal-card">
+      <div class="goal-numbers">
+        <div class="goal-stat">
+          <span class="goal-label">Recaudado</span>
+          <span class="goal-value" id="raisedValue">$0</span>
+        </div>
+        <div class="goal-stat is-goal">
+          <span class="goal-label">Meta</span>
+          <span class="goal-value is-accent" id="goalValue">$150,000</span>
+        </div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="progress-caption" id="progressCaption">0% de la meta alcanzada</p>
     </div>
   </div>
 </section>
@@ -671,6 +825,28 @@
 <div class="toast" id="toast">Copiado al portapapeles</div>
 
 <script>
+  // META DE RECAUDACIÓN: actualiza CAMPAIGN_RAISED (en USD) a medida que se
+  // reciban donaciones. La barra de progreso y el porcentaje se recalculan
+  // automáticamente — no hay que tocar nada más.
+  const CAMPAIGN_GOAL = 150000;
+  const CAMPAIGN_RAISED = 0;
+
+  function formatUSD(amount) {
+    return '$' + Math.round(amount).toLocaleString('en-US');
+  }
+
+  const raisedEl = document.getElementById('raisedValue');
+  const goalEl = document.getElementById('goalValue');
+  const fillEl = document.getElementById('progressFill');
+  const captionEl = document.getElementById('progressCaption');
+  if (raisedEl && goalEl && fillEl && captionEl) {
+    raisedEl.textContent = formatUSD(CAMPAIGN_RAISED);
+    goalEl.textContent = formatUSD(CAMPAIGN_GOAL);
+    const pct = Math.min(100, Math.round((CAMPAIGN_RAISED / CAMPAIGN_GOAL) * 100));
+    fillEl.style.width = pct + '%';
+    captionEl.textContent = pct + '% de la meta alcanzada';
+  }
+
   const toast = document.getElementById('toast');
   let toastTimer;
   function showToast(msg) {
@@ -712,7 +888,7 @@
     });
   });
 
-  const shareText = 'Ayudemos a Esteban "Cuilo" Ruiz en su batalla contra el cáncer. Cada aporte cuenta.';
+  const shareText = 'Ayudemos a Esteban "Cuilo" Ruiz a reunir $150,000 USD para su tratamiento contra el cáncer. Cada aporte cuenta.';
 
   document.getElementById('shareWhatsapp').addEventListener('click', () => {
     const url = 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + window.location.href);
